@@ -1,0 +1,7 @@
+FROM is_git:base
+MAINTAINER MaheshOrsu
+
+CMD cd /sag/IntegrationServer/instances/default/packages/ && get clone https://github.com/Orsumahesh/TestRepo1.get && cp -r ./TestRepo1/* . && rm -rf *.git TestRepo1 &&/sag/profiles/IS_default/bin/console.sh
+
+Expose 5555
+Expose 9999 
